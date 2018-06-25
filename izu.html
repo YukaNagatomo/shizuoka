@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shizuokacity</title>
+    <link rel="stylesheet" href="./css/toubu.css">
+    <link rel="stylesheet" href="./css/jquery.multiscroll.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.multiscroll.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#myContainer').multiscroll({
+                anchors: ['河津パテガル公園', '熱海サンビーチ', '修善寺虹の郷'], // アンカーリンクの設定
+                menu: '#nav', // メニューの親要素
+                paddingTop: 50, // 固定ヘッダー分の上paddingを取ることが出来ます。
+                paddingBottom: 0, // 固定フッター分の下paddingを取ることが出来ます。
+                easing: 'easeInOutBack', // イージング（jquery.easings.min.jsを読み込む）
+                scrollingSpeed: 700, // イージングのスピード
+                css3: true, //「true」にするとCSS3のtransformでアニメーションします。非対応ブラウザはjQueryでのアニメーションになる。
+                touchSensitivity: 10, // スマートフォンなどのタッチデバイスで、どの程度までスワイプしたらスクロールするか調整できる。（%）
+                loopTop: true, //「true」にすると最初のセクションから上にスクロールした時に、最後のセクションに移動するようになる。
+                loopBottom: true //「true」にすると最後のセクションから下にスクロールした時に、最初のセクションに移動するようになる。
+            });
+            $('.toggle').on('click', function() {
+                $('.menu').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <a href="index.html" class="back">← TOP</a>
+
+    <div class='menu'>
+        <span class='toggle'>
+    <i></i>
+    <i></i>
+    <i></i>
+  </span>
+        <div class='menuContent'>
+            <ul>
+                <li><a href="tyubu.html" class="link">中部エリア</a></li>
+                <li><a href="toubu.html" class="link">東部エリア</a></li>
+                <li><a href="izu.html" class="link">伊豆半島エリア</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-arrow">
+        <span class="arrow"></span>
+        <span class="arrow middle"></span>
+        <span class="arrow bottom"></span>
+    </div>
+    <div id="myContainer">
+        <div class="ms-left">
+            <div class="ms-section left">
+                <img src="./images/pategaru.png" alt="">
+            </div>
+            <div class="ms-section left">
+                <img src="./images/atami.png" alt="">
+            </div>
+            <div class="ms-section left">
+                <img src="./images/syuzenji.png" alt="">
+            </div>
+        </div>
+        <div class="ms-right">
+            <div class="ms-section pategaru" id="pategaru" style="color: #fff; background-color: #e9546b;">
+                <h1>河津パテガル公園</h1>
+                <h3>6000本のバラが咲くフランス式庭園</h3>
+                <p>5～11月には、日本ではここでしか見られない珍しい品種も含む約1100種6000本のバラが咲き続け、美しい空間が楽しめます。またバラの風味豊かなジュースやアイスが味わえます。
+                </p>
+            </div>
+            <div class="ms-section atami" id="atami" style="color: #fff; background-color: #59b9c6;">
+                <h1>熱海サンビーチ</h1>
+                <h3>夜には幻想的なムーンライトビーチに変身</h3>
+                <p>立ち並ぶホテル郡、ヤシ並木が続く白い砂浜、青い海は、リゾート地のような雰囲気。夜には砂浜がライトアップされ、幻想的なムーンライトビーチに変身。毎年4～12月にかけて行われる熱海海上花火大会を間近で見ることができます。
+                </p>
+            </div>
+            <div class="ms-section syuzenji" id="syuzenji" style="color: #fff; background-color: #9fc24d;">
+                <h1>修善寺虹の郷</h1>
+                <h3>花と緑あふれるテーマパーク</h3>
+                <p>修善寺自然公園の中にあるレジャー公園で、園内は西洋ゾーンと和風ゾーンに分かれています。西洋ゾーンは17世紀の街並を再現したイギリス村とカナダ村、西洋風花園などがあり、英国製のミニSLが結んでいます。インスタ映え写真が撮れる可愛い場所がたくさんあるのでオススメです。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shizuokacity</title>
+    <link rel="stylesheet" href="./css/toubu.css">
+    <link rel="stylesheet" href="./css/jquery.multiscroll.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.multiscroll.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#myContainer').multiscroll({
+                anchors: ['御殿場高原 時之栖', '富士芝桜まつり', ], // アンカーリンクの設定
+                menu: '#nav', // メニューの親要素
+                paddingTop: 50, // 固定ヘッダー分の上paddingを取ることが出来ます。
+                paddingBottom: 0, // 固定フッター分の下paddingを取ることが出来ます。
+                easing: 'easeInOutBack', // イージング（jquery.easings.min.jsを読み込む）
+                scrollingSpeed: 700, // イージングのスピード
+                css3: true, //「true」にするとCSS3のtransformでアニメーションします。非対応ブラウザはjQueryでのアニメーションになる。
+                touchSensitivity: 10, // スマートフォンなどのタッチデバイスで、どの程度までスワイプしたらスクロールするか調整できる。（%）
+                loopTop: true, //「true」にすると最初のセクションから上にスクロールした時に、最後のセクションに移動するようになる。
+                loopBottom: true //「true」にすると最後のセクションから下にスクロールした時に、最初のセクションに移動するようになる。
+            });
+            $('.toggle').on('click', function() {
+                $('.menu').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <a href="index.html" class="back">← TOP</a>
+
+    <div class='menu'>
+        <span class='toggle'>
+    <i></i>
+    <i></i>
+    <i></i>
+  </span>
+        <div class='menuContent'>
+            <ul>
+                <li><a href="tyubu.html" class="link">中部エリア</a></li>
+                <li><a href="toubu.html" class="link">東部エリア</a></li>
+                <li><a href="izu.html" class="link">伊豆半島エリア</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-arrow">
+        <span class="arrow"></span>
+        <span class="arrow middle"></span>
+        <span class="arrow bottom"></span>
+    </div>
+    <div id="myContainer">
+        <div class="ms-left">
+            <div class="ms-section left">
+                <img src="./images/tokinosumika.png" alt="">
+            </div>
+            <div class="ms-section left">
+                <img src="./images/sibazakura.png" alt="">
+            </div>
+        </div>
+        <div class="ms-right">
+            <div class="ms-section toki" id="toki">
+                <h1>御殿場高原 時之栖</h1>
+                <h3>300万球の電灯を使ったクリスマスイルミネーション</h3>
+                <p>
+                    夏と冬には発光ダイオードを使ったイルミネーションが行われています。 園内は300万球の電灯がともり、時之栖クリスマスイルミネーションシンボルである、ひいらぎの葉で覆われた長さ370mの『光のトンネル』の輝きは特に圧巻。
+                </p>
+            </div>
+            <div class="ms-section siba" id="siba">
+                <h1>富士芝桜まつり</h1>
+                <h3>富士山の大自然の中に、鮮やかな花の絨毯</h3>
+                <p>約2.4haの敷地に約80万株のシバザクラを植栽しています。 開花時期は4月下旬～5月下旬で、モンブラン（白）やスカーレット（赤）など５種類のシバザクラが咲き誇ります。赤、紅、白、桜色の絨毯は、まさに絶景。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

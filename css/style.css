@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'suushiki';
+    src: url('../fonts/suushiki.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Connoisseurs';
+    src: url('../fonts/Connoisseurs.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'billy';
+    src: url('../fonts/Billy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'goku';
+    src: url('../fonts/gokuboso.otf') format('opentype');
+}
+
+.capture1 {
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/fuji.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-family: 'Connoisseurs';
+}
+
+.capture1:before {
+    content: '';
+    background: inherit;
+    /*.bgImageで設定した背景画像を継承する*/
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    /*重なり順序を一番下にしておく*/
+}
+
+.capture2 {
+    width: 100%;
+    height: 600px;
+    background-color: #2a83a2;
+    /*    background-image: url("../images/shizuoka_touka_bb.png");*/
+    background-position: center;
+    background-size: 550px;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    font-family: 'goku';
+}
+
+.capture3 {
+    width: 100%;
+    height: 600px;
+    background-color: #E9E8E6;
+    background-image: url("../images/shizuoka_touka_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    font-family: 'goku';
+}
+
+.catch {
+    width: 100%;
+    height: 180px;
+    font-size: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.capture1 img {
+    width: 300px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.info {
+    width: 605px;
+    height: 250px;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    line-height: 60px;
+    letter-spacing: 15px;
+}
+
+.plan {
+    display: inline-block;
+    text-decoration: none;
+    background: #f09199;
+    color: #fff;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #f09199;
+    border: solid 2px #fff;
+    transition: .2s;
+    margin: 10px 73px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.plan:hover {
+    border: dashed 2px #fff;
+    box-shadow: 0px 0px 0px 5px #f09199;
+    opacity: 1;
+}
+
+.button {
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

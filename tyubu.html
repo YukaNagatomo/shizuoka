@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shizuokacity</title>
+    <link rel="stylesheet" href="./css/toubu.css">
+    <link rel="stylesheet" href="./css/jquery.multiscroll.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.multiscroll.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#myContainer').multiscroll({
+                anchors: ['大井川鉄道', '夢の吊り橋'], // アンカーリンクの設定
+                menu: '#nav', // メニューの親要素
+                paddingTop: 50, // 固定ヘッダー分の上paddingを取ることが出来ます。
+                paddingBottom: 0, // 固定フッター分の下paddingを取ることが出来ます。
+                easing: 'easeInOutBack', // イージング（jquery.easings.min.jsを読み込む）
+                scrollingSpeed: 700, // イージングのスピード
+                css3: true, //「true」にするとCSS3のtransformでアニメーションします。非対応ブラウザはjQueryでのアニメーションになる。
+                touchSensitivity: 10, // スマートフォンなどのタッチデバイスで、どの程度までスワイプしたらスクロールするか調整できる。（%）
+                loopTop: true, //「true」にすると最初のセクションから上にスクロールした時に、最後のセクションに移動するようになる。
+                loopBottom: true //「true」にすると最後のセクションから下にスクロールした時に、最初のセクションに移動するようになる。
+            });
+            $('.toggle').on('click', function() {
+                $('.menu').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <a href="index.html" class="back">← TOP</a>
+
+    <div class='menu'>
+        <span class='toggle'>
+    <i></i>
+    <i></i>
+    <i></i>
+  </span>
+        <div class='menuContent'>
+            <ul>
+                <li><a href="tyubu.html" class="link">中部エリア</a></li>
+                <li><a href="toubu.html" class="link">東部エリア</a></li>
+                <li><a href="izu.html" class="link">伊豆半島エリア</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-arrow">
+        <span class="arrow"></span>
+        <span class="arrow middle"></span>
+        <span class="arrow bottom"></span>
+    </div>
+    <div id="myContainer">
+        <div class="ms-left">
+            <div class="ms-section left">
+                <img src="./images/ooigawa.png" alt="">
+            </div>
+            <div class="ms-section left">
+                <img src="./images/turibashi.png" alt="">
+            </div>
+        </div>
+        <div class="ms-right">
+            <div class="ms-section ooigawa" id="ooigawa" style="color: #fff; background-color: #f39800;">
+                <h1>大井川鉄道</h1>
+                <h3>大井川沿いに走るSL列車の旅</h3>
+                <p>静岡県の中央部、緑の茶畑の中を大井川に沿って南北に走る鉄道です。全長39.5kmで、現在でもほぼ毎日運転をしています。秘境奥大井の大自然とモクモクと黒い煙を吐き出しながら走り目の前に迫ってくるＳＬがマッチし、まるで昭和初期にタイムスリップしたような感じがします。
+                </p>
+            </div>
+            <div class="ms-section turibashi" id="turibashi" style="color: #fff; background-color: #009b9f;">
+                <h1>夢の吊り橋</h1>
+                <h3>恋のお祈りをすると夢が叶う吊り橋
+                </h3>
+                <p>南アルプスの麓にある大間ダム湖にかかるつり橋。高さ8メートル、長さ90メートルあり、歩く度にゆれてスリル満点。眼下には美しいエメラルドグリーンの湖面が広がり、四季折々の風景を映し出しています。吊橋の真ん中で恋の成就を願うと、願いが叶うと言い伝えられています。
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
